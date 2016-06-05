@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>CODE IT</title>
+    <link href='https://fonts.googleapis.com/css?family=Arimo:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+</head>
+<body>
+    <header>
+        <div class="top row">
+            <div id="logo" class="col-sm-7">
+                <a href="#"><img src="images/logo.png" width="205" height="50" alt="logo"/></a>
+            </div>
+            <div class="feedback col-sm-5">
+                <div class="phone_number">
+                    <p>+3 (050) 777 77 77</p>
+                    <p>+3 (050) 777 77 77</p>
+                </div>
+                <div class="feedback_button">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="FEEDBACK">FEEDBACK</button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="images/modal-close.jpg" alt="Close"/></button>
+                                    <h4 class="modal-title" id="exampleModalLabel">feedback</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="name" class="control-label">Name <span class="glyphicon glyphicon-asterisk"></span></label>
+                                            <input type="text" class="form-control" id="name" required pattern="^[a-zA-Z]+$"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="phone" class="control-label">Phone <span class="glyphicon glyphicon-asterisk"></span></label>
+                                            <input type="tel" class="form-control" id="phone" required pattern="\+[0-9]{,3}\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email" class="control-label">Email <span class="glyphicon glyphicon-asterisk"></span></label>
+                                            <input type="email" class="form-control" id="email" required/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="control-label">Text</label>
+                                            <textarea class="form-control" id="message-text"></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="menu">
+            <div class="navbar navbar-inverse">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="responsive-menu">
+                    <ul class="nav navbar-nav navigation">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Catalog</a></li>
+                        <li><a href="#">Shipping and payment</a></li>
+                        <li><a href="#">Price</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="images/slider.jpg" alt="carousel image">
+            </div>
+            <div class="item">
+                <img src="images/slider.jpg" alt="carousel image">
+            </div>
+            <div class="item">
+                <img src="images/slider.jpg" alt="carousel image">
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Catalog</a></li>
+            <li class="active">Category Name</li>
+        </ol>
+        <div class="tabs" data-example-id="togglable-tabs">
+            <div class="aside">
+                <ul id="myTabs" class="nav nav-tabs leftblock" role="tablist">
+                    <li role="presentation"><a href="#cars" id="cars-tab" role="tab" data-toggle="tab" aria-controls="cars" aria-expanded="true">Cars</a></li>
+                    <li role="presentation" class="dropdown active open"> <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents" aria-expanded="false">Household Appliances</a>
+                        <ul class="dropdown-menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
+                            <li class="active"><a href="#dropdown1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">Microwaves</a></li>
+                            <li><a href="#dropdown2" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">Fridges</a></li>
+                            <li><a href="#dropdown3" role="tab" id="dropdown3-tab" data-toggle="tab" aria-controls="dropdown3">Посудомоечные машины</a></li>
+                            <li><a href="#dropdown4" role="tab" id="dropdown4-tab" data-toggle="tab" aria-controls="dropdown4">Dishwashers</a></li>
+                        </ul>
+                    </li>
+                    <li role="presentation"><a href="#mobile_equipment" role="tab" id="mobile_equipment-tab" data-toggle="tab" aria-controls="mobile_equipment">Mobile Equipment</a></li>
+                    <li role="presentation"><a href="#computers" role="tab" id="computers-tab" data-toggle="tab" aria-controls="computers">Computers</a></li>
+                    <li role="presentation"><a href="#clothing" role="tab" id="clothing-tab" data-toggle="tab" aria-controls="clothing">Clothing</a></li>
+                    <li role="presentation"><a href="#mobile_equipment" role="tab" id="real_estate-tab" data-toggle="tab" aria-controls="real_estate">Real Estate</a></li>
+                </ul>
+                <a class="download" href="#" download>Price List</a>
+            </div>
+            <div id="myTabContent" class="tab-content centerblock">
+                <div role="tabpanel" class="tab-pane fade" id="cars" aria-labelledby="cars-tab">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade in active row" id="dropdown1" aria-labelledby="dropdown1-tab">
+                    <div class="col-sm-4 item_caption">
+                        <div class="thumbnail item_thumbnail">
+                            <img src="images/item.png" alt="item">
+                            <div class="caption">
+                                <p>Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.</p>
+                                <div class="price">
+                                    <p>$ 550.95</p>
+                                    <a href="#"><img src="images/addbasket.png" alt=""/></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 item_caption">
+                        <div class="thumbnail item_thumbnail">
+                            <img src="images/item.png" alt="item">
+                            <div class="caption">
+                                <p>Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.</p>
+                                <div class="price">
+                                    <p>$ 350.95</p>
+                                    <a href="#"><img src="images/addbasket.png" alt=""/></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 item_caption">
+                        <div class="thumbnail item_thumbnail">
+                            <img src="images/item.png" alt="item">
+                            <div class="caption">
+                                <p>Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.</p>
+                                <div class="price">
+                                    <p>$ 850.95</p>
+                                    <a href="#"><img src="images/addbasket.png" alt=""/></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 item_caption">
+                        <div class="thumbnail item_thumbnail">
+                            <img src="images/item.png" alt="item">
+                            <div class="caption">
+                                <p>Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.</p>
+                                <div class="price">
+                                    <p>$ 550.95</p>
+                                    <a href="#"><img src="images/addbasket.png" alt=""/></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 item_caption">
+                        <div class="thumbnail item_thumbnail">
+                            <img src="images/item.png" alt="item">
+                            <div class="caption">
+                                <p>Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.</p>
+                                <div class="price">
+                                    <p>$ 350.95</p>
+                                    <a href="#"><img src="images/addbasket.png" alt=""/></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 item_caption">
+                        <div class="thumbnail item_thumbnail">
+                            <img src="images/item.png" alt="item">
+                            <div class="caption">
+                                <p>Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.</p>
+                                <div class="price">
+                                    <p>$ 850.95</p>
+                                    <a href="#"><img src="images/addbasket.png" alt=""/></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="nav_tabs">
+                        <ul class="pagination">
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li class="active"><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="dropdown2" aria-labelledby="dropdown2-tab">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="dropdown3" aria-labelledby="dropdown3-tab">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="dropdown4" aria-labelledby="dropdown4-tab">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="mobile_equipment" aria-labelledby="mobile_equipment-tab">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="computers" aria-labelledby="computers-tab">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="clothing" aria-labelledby="clothing-tab">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="real_estate" aria-labelledby="real_estate-tab">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+        </div>
+        <section class="info">
+            <div class="information">
+                <article class="leftarticle">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper lacinia auctor. Aliquam vitae mi ornare, tincidunt risus sed, euismod nisl. Nullam imperdiet nisi ut est imperdiet posuere. Cras sodales molestie enim eget porta. Vestibulum scelerisque blandit pulvinar. Donec condimentum malesuada neque a blandit. In sodales ex ac pharetra dictum. In interdum facilisis justo. Maecenas sit amet mi vitae purus ultrices fermentum. In vel orci erat. Suspendisse potenti. Donec arcu nunc, imperdiet id neque nec, mollis viverra nisl. Fusce egestas ligula vitae tristique dignissim.
+                </article>
+                <article class="rightarticle">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper lacinia auctor. Aliquam vitae mi ornare, tincidunt risus sed, euismod nisl. Nullam imperdiet nisi ut est imperdiet posuere. Cras sodales molestie enim eget porta. Vestibulum scelerisque blandit pulvinar. Donec condimentum malesuada neque a blandit. In sodales ex ac pharetra dictum. In interdum facilisis justo. Maecenas sit amet mi vitae purus ultrices fermentum. In vel orci erat. Suspendisse potenti. Donec arcu nunc, imperdiet id neque nec, mollis viverra nisl. Fusce egestas ligula vitae tristique dignissim.
+                </article>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="footer_info">
+            <div class="information_block">
+                <p>© CodeIT 2012–2013,<br>All Rights Reserved. </p>
+            </div>
+            <nav class="menu_footer">
+                <div class="navbar">
+                    <ul class="nav navbar-nav navigation_footer">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Catalog</a></li>
+                        <li><a href="#">Shipping and payment</a></li>
+                        <li><a href="#">Price</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
